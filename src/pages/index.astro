@@ -1,0 +1,17 @@
+---
+import LogoLight from '@/public/astro-logo.svg?raw'
+import ThemeToggle from '@/components/ThemeToggle.astro'
+import AppLayout from '@/layouts/AppLayout.astro'
+---
+
+<AppLayout title="Astro | TailwindCSS - Starter kit">
+  <main
+    class="flex min-h-screen flex-col items-center justify-center text-slate-900 dark:text-slate-200"
+  >
+    <div class="[&>*]:fill-slate-900 dark:[&>*]:fill-white">
+      <Fragment class:list={['dark:fill-red-500']} set:html={LogoLight} />
+    </div>
+    <h1 class="mb-8 text-3xl font-semibold md:text-7xl">Astro | TailwindCSS - Starter kit</h1>
+    <ThemeToggle />
+  </main>
+</AppLayout>
